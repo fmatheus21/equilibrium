@@ -9,6 +9,7 @@ import { HomeModule } from './home/home.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { AboutModule } from './about/about.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     CoreModule,
     HomeModule,
-    PublicModule
+    PublicModule,
+    AboutModule
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy }

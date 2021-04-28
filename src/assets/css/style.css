@@ -436,6 +436,11 @@ img {
     background-size: 100px;
 }
 
+.main-header .sticky-header .main-menu .navigation>li.current>a,
+.main-header .sticky-header .main-menu .navigation>li:hover>a {
+    color: #ffcc00 !important;
+}
+
 
 /*** 
 
