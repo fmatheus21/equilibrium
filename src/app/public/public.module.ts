@@ -11,6 +11,7 @@ import { PriceComponent } from './price/price.component';
 import { FluidComponent } from './fluid/fluid.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { RouterModule } from '@angular/router';
+import { MapComponent } from './map/map.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { RouterModule } from '@angular/router';
     CounterComponent,
     PriceComponent,
     FluidComponent,
-    TestimonialComponent
+    TestimonialComponent,
+    MapComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +42,8 @@ import { RouterModule } from '@angular/router';
     CounterComponent,
     PriceComponent,
     FluidComponent,
-    TestimonialComponent
+    TestimonialComponent,
+    MapComponent
   ]
 })
 export class PublicModule { }
