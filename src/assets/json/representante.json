@@ -1,0 +1,17 @@
+[{
+    "contactRepresentative": [{
+        "title": "Representante",
+        "titleForm": "Deseja saber mais?",
+        "titleSubForm": "Nos envie uma mensagem e em breve retornaremos.",
+        "labelEmailForm": "Seu Email *",
+        "labelSubjectForm": "Assunto *",
+        "labelMessageForm": "Sua Mensagem *",
+        "labelButtonForm": "Enviar",
+        "labelAddress": "Endereço: ",
+        "textAddress": "Avenida Afonso Celso, Quadra 17, Lote 36/37 Campos Elíseos, Duque de Caxias",
+        "labelPhone": "Telefone: ",
+        "textPhone": "(00) 0000-0000",
+        "labelEmail": "Email: ",
+        "textEmail": "contato@equilibriumracoes.com.br"
+    }]
+}]

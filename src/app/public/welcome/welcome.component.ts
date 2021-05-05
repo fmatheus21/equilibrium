@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from 'src/app/_service/app.service';
 
 @Component({
   selector: 'app-welcome',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
+
+  welcome: any[];
+
+  constructor(
+    private appService: AppService
+  ) { }
 
   ngOnInit(): void {
+    this.loadWelcome();
+  }
+
+  private loadWelcome() {
+    this.appService.findWelcome()
+      .subscribe(data => {
+        this.returnSection1(data);
+      })
+  }
+
+  private returnSection1(data) {
+    var result = JSON.parse(JSON.stringify(data));
+    result = Object.keys(result).map(e => result[e].welcome);
+    result.forEach((e: any) => {
+      this.welcome = e;
+      console.log(this.welcome)
+    })
   }
 
 }
