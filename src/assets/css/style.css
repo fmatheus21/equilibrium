@@ -1397,7 +1397,17 @@ img {
     line-height: 24px;
 }
 
-.ui-menu-item:hover {}
+.current-dropdown {
+    background-color: #f07f3c;
+}
+
+.current-dropdown a {
+    color: #FFFFFF !important;
+}
+
+.current-dropdown a:before {
+    background-color: #FFFFFF !important;
+}
 
 
 /*** 

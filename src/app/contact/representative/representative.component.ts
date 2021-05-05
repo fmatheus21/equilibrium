@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AppService } from 'src/app/_service/app.service';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  selector: 'app-representative',
+  templateUrl: './representative.component.html',
+  styleUrls: ['./representative.component.css']
 })
-export class ContactComponent implements OnInit {
+export class RepresentativeComponent implements OnInit {
 
   contact: any[];
 
@@ -20,7 +20,7 @@ export class ContactComponent implements OnInit {
 
 
   private loadContact() {
-    this.appService.findContactUs()
+    this.appService.findContactRepresentative()
       .subscribe(data => {
         this.returnContact(data);
       })

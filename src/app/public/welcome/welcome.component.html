@@ -1,32 +1,29 @@
-<section class="welcome-section">
+<section class="welcome-section" *ngFor="let object of welcome">
     <div class="auto-container">
-        <!--Sec Title-->
+
         <div class="sec-title centered">
             <div class="separator">
                 <img alt="image" src="./assets/images/icons/folha.svg" width="20px" />
             </div>
-            <h2>Bem Vindo a Equilibrium</h2>
+            <h2>{{object.title}}</h2>
         </div>
         <div class="row clearfix">
-            <!--Image Column-->
+
             <div class="image-column col-md-6 col-sm-12 col-xs-12">
                 <div class="image">
                     <img src="./assets/images/resource/welcome.jpg" alt="" />
                 </div>
             </div>
-            <!--Content Column-->
+
             <div class="content-column col-md-6 col-sm-12 col-xs-12">
                 <div class="inner-column">
-                    <div class="text">
-                        <p>Somos uma fabricante de rações que atua no segmento de graxaria, coletando e processando resíduos de carne desde 2020.</p>
-                        <p>Temos um compromisso direto com o meio ambiente. Essa preocupação faz parte de nossa filosofia e influencia nosso modo de atuação, decisão e novos direcionamentos de mercado. </p>
-                    </div>
+                    <div class="text" [innerHTML]="object.description"></div>
                     <ul class="list-style-one">
-                        <li>Compromisso com o Meio Ambiente</li>
-                        <li>Sustentabilidade</li>
-                        <li>Qualidade e Tecnologia</li>
+                        <li>{{object.name1}}</li>
+                        <li>{{object.name2}}</li>
+                        <li>{{object.name3}}</li>
                     </ul>
-                    <a routerLink="/sobre" class="theme-btn btn-style-two">Saiba Mais</a>
+                    <a routerLink="/sobre" class="theme-btn btn-style-two">{{object.titleButton}}</a>
                 </div>
             </div>
         </div>
