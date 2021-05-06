@@ -1,0 +1,21 @@
+[{
+    "featured": [{
+            "title": "we heal pets",
+            "description": "quick veterinary services",
+            "icon": "icon flaticon-face-of-staring-dog",
+            "duration": "500ms"
+        },
+        {
+            "title": "we care pets",
+            "description": "pet sheltering & adoption",
+            "icon": "icon flaticon-dog-bone",
+            "duration": "1500ms"
+        },
+        {
+            "title": "we love pets",
+            "description": "Show love & donate us",
+            "icon": "icon flaticon-pawprint-1",
+            "duration": "2500ms"
+        }
+    ]
+}]

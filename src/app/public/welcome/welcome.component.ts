@@ -22,16 +22,15 @@ export class WelcomeComponent implements OnInit {
   private loadWelcome() {
     this.appService.findWelcome()
       .subscribe(data => {
-        this.returnSection1(data);
+        this.returnWelcome(data);
       })
   }
 
-  private returnSection1(data) {
+  private returnWelcome(data) {
     var result = JSON.parse(JSON.stringify(data));
     result = Object.keys(result).map(e => result[e].welcome);
     result.forEach((e: any) => {
       this.welcome = e;
-      console.log(this.welcome)
     })
   }
 

@@ -62,12 +62,9 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     AboutModule,
     ContactModule,
     ToastyModule.forRoot(),
-    NgxUiLoaderModule,
-    NgxUiLoaderHttpModule.forRoot(ngxUiLoaderConfig),
-    NgxUiLoaderRouterModule,
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
-    //Se você precisar mostrar o botão giratório de fundo, faça o seguinte:
-    //NgxUiLoaderRouterModule.forRoot({ showForeground: false })
+    NgxUiLoaderHttpModule.forRoot({ showForeground: true }),
+    NgxUiLoaderRouterModule.forRoot({ showForeground: true })
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy }
