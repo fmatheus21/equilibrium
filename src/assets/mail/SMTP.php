@@ -8,7 +8,7 @@ require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 error_reporting(E_ALL);
 
-$mail = new PHPMailer(true);
+$mail = new PHPMailer(true); 
 
     $emailMail        = 'contato@equilibriumracoes.com.br';
 
