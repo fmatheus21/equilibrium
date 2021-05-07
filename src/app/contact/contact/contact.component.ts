@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EmailEnum } from 'src/app/_enum/email.enum';
 import { AppService } from 'src/app/_service/app.service';
 import { MailService } from 'src/app/_service/mail.service';
 import { MessageService } from 'src/app/_service/message.service';
@@ -57,8 +58,11 @@ export class ContactComponent implements OnInit {
     let object = {
       email: form.email,
       subject: form.subject,
-      message: form.message
+      message: form.message,
+      parameter: EmailEnum.CONTACT_US
     };
+
+    console.log(object)
 
     return this.mailService.sendContactUs(object)
       .subscribe(
