@@ -1409,6 +1409,10 @@ img {
     background-color: #FFFFFF !important;
 }
 
+.links-widget .links .current a {
+    color: #ffcc00;
+}
+
 
 /*** 
 

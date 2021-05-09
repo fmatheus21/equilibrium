@@ -1,12 +1,12 @@
-<footer class="main-footer">
+<footer class="main-footer" *ngFor="let object of footer">
     <div class="auto-container">
-        <!--Widgets Section-->
+
         <div class="widgets-section">
             <div class="row clearfix">
-                <!--big column-->
+
                 <div class="big-column col-md-6 col-sm-12 col-xs-12">
                     <div class="row clearfix">
-                        <!--Footer Column-->
+
                         <div class="footer-column col-md-7 col-sm-6 col-xs-12">
                             <div class="footer-widget logo-widget">
                                 <div class="logo">
@@ -14,23 +14,38 @@
                                         <img src="./assets/images/logo.png" alt="logo" />
                                     </a>
                                 </div>
-                                <div class="text">Somos uma fabricante de rações que atua no segmento de graxaria, coletando e processando resíduos de carne desde 2020. Temos um compromisso direto com o meio ambiente. Essa preocupação faz parte de nossa filosofia e influencia
-                                    nosso modo de atuação, decisão e novos direcionamentos de mercado.
+                                <div class="text">{{object.resume}}
                                 </div>
                                 <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook-square"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-instagram"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-whatsapp"></span></a></li>
+                                    <li>
+                                        <a [href]="object.facebook" target="_blank">
+                                            <span class="fa fa-facebook-square"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a [href]="object.instagram" target="_blank">
+                                            <span class="fa fa-instagram"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a [href]="object.whatsapp" target="_blank">
+                                            <span class="fa fa-whatsapp"></span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
-                        <!--Footer Column-->
+
                         <div class="footer-column col-md-5 col-sm-6 col-xs-12">
                             <div class="footer-widget links-widget">
                                 <h2>Web Links</h2>
                                 <ul class="links">
-                                    <li><a [routerLink]="['/home']">Home</a></li>
-                                    <li><a href="#">A Empresa</a></li>
+                                    <li routerLinkActive="current" routerLinkActiveOptions="{exact: true}">
+                                        <a routerLink="/home">Home</a>
+                                    </li>
+                                    <li routerLinkActive="current" routerLinkActiveOptions="{exact: true}">
+                                        <a routerLink="/sobre">A Empresa</a>
+                                    </li>
                                     <li><a href="#">Produtos</a></li>
                                     <li><a href="#">Contatos</a></li>
                                 </ul>
@@ -38,35 +53,42 @@
                         </div>
                     </div>
                 </div>
-                <!--big column-->
+
                 <div class="big-column col-md-6 col-sm-12 col-xs-12">
                     <div class="row clearfix">
-                        <!--Footer Column-->
+
                         <div class="footer-column col-md-6 col-sm-6 col-xs-12">
                             <div class="footer-widget info-widget">
                                 <h2>Entre Em Contato</h2>
                                 <ul>
-                                    <li><span class="icon fa fa-map-marker"></span>Campos Elíseos, Duque de Caxias</li>
-                                    <li><span class="icon fa fa-phone"></span>+(1) 234 567 8900</li>
-                                    <li><span class="icon fa fa-envelope"></span>contato@equilibriumracoes.com.br</li>
+                                    <li><span class="icon fa fa-map-marker"></span>{{object.address}}</li>
+                                    <li><span class="icon fa fa-phone"></span>{{object.phone}}</li>
+                                    <li><span class="icon fa fa-envelope"></span>{{object.email}}</li>
                                 </ul>
                             </div>
                         </div>
-                        <!--Footer Column-->
+
                         <div class="footer-column col-md-6 col-sm-6 col-xs-12">
                             <div class="footer-widget subscribe-widget">
                                 <h2>Receba as Novidades</h2>
-                                <div class="text">Fique por dentro de todas as novidades se cadastrando abaixo.
+                                <div class="text">{{object.descriptionNews}}
                                 </div>
                                 <div class="subscribe-form">
-                                    <form method="post" action="http://www.shmai.com/preview/pawrex-html/contact.html">
+
+                                    <form [formGroup]="form" autocomplete="on" (ngSubmit)="send(form.value)">
                                         <div class="form-group">
-                                            <input type="email" name="email" value="" placeholder="Email" required="">
+                                            <input type="email" formControlName="email" name="email" placeholder="Seu email">
+                                            <small *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched">Preenchimento
+                        obrigatório.</small>
+                                            <small *ngIf="form.controls['email'].hasError('email') && form.controls['email'].touched">Informe
+                        um email
+                        válido.</small>
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit" class="theme-btn btn-style-four">Inscrever-se</button>
+                                            <button type="submit" class="theme-btn btn-style-four" [disabled]="!form.valid">Inscrever-se</button>
                                         </div>
                                     </form>
+
                                 </div>
                             </div>
                         </div>

@@ -8,9 +8,9 @@ require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 error_reporting(E_ALL);
 
-$mail = new PHPMailer(true); 
+$mail = new PHPMailer(true);
 
-    $emailMail        = 'contato@equilibriumracoes.com.br';
+    $emailMail        = 'form.contact@equilibriumracoes.com.br';
 
     $mail->isSMTP(); 
     $mail->Host       = 'smtp.hostinger.com.br';
@@ -34,7 +34,7 @@ $mail = new PHPMailer(true);
     
     try {
   	$mail->send();       
-        echo 'Email enviado com sucesso!';    
+        echo true;    
     } catch (Exception $e) {    
      $error = 'Mail error: '.$mail->ErrorInfo;    
       echo $error;   

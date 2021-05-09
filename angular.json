@@ -25,7 +25,7 @@
                         ],
                         "styles": [
                             "src/styles.css",
-                            "node_modules/ng2-toasty/style-bootstrap.css"
+                            "node_modules/animate.css/animate.min.css"
                         ],
                         "scripts": []
                     },

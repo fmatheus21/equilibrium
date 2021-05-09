@@ -12,8 +12,9 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AboutModule } from './about/about.module';
 import { ContactModule } from './contact/contact.module';
-import { ToastyModule } from 'ng2-toasty';
 import { NgxUiLoaderConfig, NgxUiLoaderHttpModule, NgxUiLoaderModule, NgxUiLoaderRouterModule, PB_DIRECTION, POSITION, SPINNER } from "ngx-ui-loader";
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   bgsColor: '#f07f3c',
@@ -61,7 +62,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     PublicModule,
     AboutModule,
     ContactModule,
-    ToastyModule.forRoot(),
+    SweetAlert2Module.forRoot(),
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
     NgxUiLoaderHttpModule.forRoot({ showForeground: true }),
     NgxUiLoaderRouterModule.forRoot({ showForeground: true })

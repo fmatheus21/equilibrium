@@ -62,19 +62,16 @@ export class ContactComponent implements OnInit {
       parameter: EmailEnum.CONTACT_US
     };
 
-    console.log(object)
 
-    return this.mailService.sendContactUs(object)
+    return this.mailService.sendMail(object)
       .subscribe(
         response => {
-          this.messageService.sendMessage('success', 'Email enviado com sucesso!');
+          this.messageService.handSuccess('Email enviado com sucesso!');
           this.formInit();
-          console.log(object)
         },
         error => {
-          error.status === 200 ? this.messageService.sendMessage('success', 'Email enviado com sucesso!') : this.messageService.sendMessage('error', 'Erro ao enviar email.');
-          error.status === 200 ? this.formInit() : '';
-          console.log(error);
+          this.messageService.handError('Erro: ' + error.message);
+          this.formInit();
         }
       );
 
