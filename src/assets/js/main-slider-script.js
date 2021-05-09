@@ -18,7 +18,7 @@ tpj(document).ready(function() {
                 onHoverStop: "off",
                 touch: {
                     touchenabled: "on",
-                    touchOnDesktop: "off",
+                    touchOnDesktop: "on",
                     swipe_threshold: 75,
                     swipe_min_touches: 1,
                     swipe_direction: "horizontal",
@@ -52,7 +52,7 @@ tpj(document).ready(function() {
             gridheight: [800, 600, 500, 400],
             lazyType: "none",
             parallax: {
-                type: "scroll",
+                type: "scrooffll",
                 origo: "enterpoint",
                 speed: 400,
                 levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 46, 47, 48, 49, 50, 55],
@@ -65,6 +65,7 @@ tpj(document).ready(function() {
             stopAtSlide: -1,
             shuffle: "off",
             autoHeight: "off",
+            disableProgressBar: "on",
             hideThumbsOnMobile: "off",
             hideSliderAtLimit: 0,
             hideCaptionAtLimit: 0,
