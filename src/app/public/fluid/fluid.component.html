@@ -9,33 +9,18 @@
         <!--Content Column-->
         <div class="content-column" style="background-image:url(../../../assets/images/resource/image-2.jpg)">
             <div class="inner-column">
-                <div class="featured-block-two">
+
+                <div class="featured-block-two" *ngFor="let object of fluid">
                     <div class="featured-inner">
                         <div class="icon-box">
-                            <span class="icon flaticon-dog"></span>
+                            <span [class]="object.icon"></span>
                         </div>
-                        <h3>Largest non-profit pet’s shelter</h3>
-                        <div class="text">Well gaudy hound hired inset flailed luxuriant much followed less this maternal oh well unavoidable crudely aloof in more save groomed.</div>
+                        <h3>{{object.title}}</h3>
+                        <div class="text">{{object.description}}</div>
                     </div>
                 </div>
-                <div class="featured-block-two">
-                    <div class="featured-inner">
-                        <div class="icon-box">
-                            <span class="icon flaticon-animal"></span>
-                        </div>
-                        <h3>Convenient pet adoption for public </h3>
-                        <div class="text">Well gaudy hound hired inset flailed luxuriant much followed less this maternal oh well unavoidable crudely aloof in more save groomed.</div>
-                    </div>
-                </div>
-                <div class="featured-block-two">
-                    <div class="featured-inner">
-                        <div class="icon-box">
-                            <span class="icon flaticon-animals-1"></span>
-                        </div>
-                        <h3>Innovative ways to help animals</h3>
-                        <div class="text">Well gaudy hound hired inset flailed luxuriant much followed less this maternal oh well unavoidable crudely aloof in more save groomed.</div>
-                    </div>
-                </div>
+
+
             </div>
         </div>
     </div>

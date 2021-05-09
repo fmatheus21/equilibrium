@@ -21,22 +21,40 @@
             <div class="form-column col-md-7 col-sm-12 col-xs-12">
 
                 <div class="contact-form">
-                    <form method="post">
+                    <form [formGroup]="form" autocomplete="on" (ngSubmit)="send(form.value)">
 
                         <div class="form-group">
-                            <input type="email" name="email" value="" [placeholder]="object.labelEmailForm" required>
+                            <input type="email" formControlName="email" name="email" [placeholder]="object.labelEmailForm">
+                            <small *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched">Preenchimento
+                obrigatório.</small>
+                            <small *ngIf="form.controls['email'].hasError('email') && form.controls['email'].touched">Informe um email
+                válido.</small>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name="subject" value="" [placeholder]="object.labelSubjectForm" required>
+                            <input type="text" formControlName="subject" name="subject" [placeholder]="object.labelSubjectForm">
+                            <small *ngIf="form.controls['subject'].hasError('required') && form.controls['subject'].touched">Preenchimento
+                obrigatório.</small>
+                            <small *ngIf="form.controls['subject'].hasError('minlength') && form.controls['subject'].touched">Deve
+                ter, no mínimo, 5 caracteres.</small>
+                            <small *ngIf="form.controls['subject'].hasError('maxlength') && form.controls['subject'].touched">Deve
+                ter, no máximo, 20 caracteres.</small>
                         </div>
 
                         <div class="form-group">
-                            <textarea name="message" [placeholder]="object.labelMessageForm" required></textarea>
+                            <textarea formControlName="message" name="message" [placeholder]="object.labelMessageForm"></textarea>
+                            <small *ngIf="form.controls['message'].hasError('required') && form.controls['message'].touched">Preenchimento
+                obrigatório.</small>
+                            <small *ngIf="form.controls['message'].hasError('minlength') && form.controls['message'].touched">Deve
+                ter, no
+                mínimo, 10 caracteres.</small>
+                            <small *ngIf="form.controls['message'].hasError('maxlength') && form.controls['message'].touched">Deve
+                ter, no
+                máximo, 255 caracteres.</small>
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="theme-btn btn-style-four">{{object.labelButtonForm}}</button>
+                            <button type="submit" class="theme-btn btn-style-four" [disabled]="!form.valid">{{object.labelButtonForm}}</button>
                         </div>
                     </form>
                 </div>

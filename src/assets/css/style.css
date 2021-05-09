@@ -1409,6 +1409,10 @@ img {
     background-color: #FFFFFF !important;
 }
 
+.links-widget .links .current a {
+    color: #ffcc00;
+}
+
 
 /*** 
 
@@ -14754,4 +14758,14 @@ p {
     transition: .5s;
     border-radius: 50%;
     opacity: 1;
+}
+
+[type="submit"]:disabled {
+    background: #bdb8b8;
+    border-color: #bdb8b8;
+    color: #7d7979;
+}
+
+.ng-invalid {
+    color: red;
 }

@@ -1,0 +1,27 @@
+[{
+    "service": [{
+        "title": "Conheça os Nossos Produtos",
+        "subtitle": "Alimento Natural Completo"
+    }],
+    "grid": [{
+            "title": "Ração Para Bovinos",
+            "description": "Abore et dolore magna aliqua ut enim minim veniam quis nostrud exercitation ullamco laboris nisi aliquip eiusmod tempor incididunt labore.",
+            "icon": "icon flaticon-pet-grooming"
+        },
+        {
+            "title": "Ração Para Aves",
+            "description": "Abore et dolore magna aliqua ut enim minim veniam quis nostrud exercitation ullamco laboris nisi aliquip eiusmod tempor incididunt labore.",
+            "icon": "icon flaticon-dog-1"
+        },
+        {
+            "title": "Ração Para Suínos",
+            "description": "Abore et dolore magna aliqua ut enim minim veniam quis nostrud exercitation ullamco laboris nisi aliquip eiusmod tempor incididunt labore.",
+            "icon": "icon flaticon-dog-1"
+        },
+        {
+            "title": "Ração Para Cães",
+            "description": "Abore et dolore magna aliqua ut enim minim veniam quis nostrud exercitation ullamco laboris nisi aliquip eiusmod tempor incididunt labore.",
+            "icon": "icon flaticon-animal-1"
+        }
+    ]
+}]

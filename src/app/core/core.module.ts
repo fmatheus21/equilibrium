@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,9 @@ import { AppRoutingModule } from '../app-routing.module';
   imports: [
     AppRoutingModule,
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     HeaderComponent,

@@ -7,9 +7,15 @@ import { Observable } from 'rxjs';
 })
 export class AppService {
 
-  private jsonContactRepresentative = './assets/json/representante.json';
-  private jsonContactUs = './assets/json/fale-conosco.json';
-  private welcome = './assets/json/bem-vindo.json';
+  private jsonContactRepresentative = './assets/json/contact-representative.json';
+  private jsonContactUs = './assets/json/contact-us.json';
+  private welcome = './assets/json/welcome.json';
+  private featured = './assets/json/featured.json';
+  private service = './assets/json/service.json';
+  private fluid = './assets/json/fluid.json';
+  private footer = './assets/json/footer.json';
+
+
 
   constructor(private http: HttpClient) {
   }
@@ -24,6 +30,22 @@ export class AppService {
 
   findWelcome(): Observable<any[]> {
     return this.http.get<any[]>(this.welcome);
+  }
+
+  findFeatured(): Observable<any[]> {
+    return this.http.get<any[]>(this.featured);
+  }
+
+  findService(): Observable<any[]> {
+    return this.http.get<any[]>(this.service);
+  }
+
+  findFluid(): Observable<any[]> {
+    return this.http.get<any[]>(this.fluid);
+  }
+
+  findFooter(): Observable<any[]> {
+    return this.http.get<any[]>(this.footer);
   }
 
 }
