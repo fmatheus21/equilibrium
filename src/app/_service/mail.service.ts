@@ -18,27 +18,37 @@ export class MailService {
 
   constructor(private http: HttpClient) { }
 
-  sendContactUs(data: any): Observable<any> {
-    return this.http.post(this.apiUrl + '/mail/send-mail-contactus.php', data, this.httpOptions).pipe(
+  sendMail(data: any): Observable<any> {
+    return this.http.post(this.apiUrl + '/mail/send-mail.php', data, this.httpOptions).pipe(
       catchError(this.handleError)
     );
   }
 
 
+
   private handleError(error: HttpErrorResponse) {
 
-    return throwError(error);
+    //return throwError(error);
     /* if (error.error instanceof ErrorEvent) {
-       console.error('An error occurred:', error.error.message);
-     } else {
-       console.error(`Backend returned code ${error.status}, ` + `body was: ${error.error}`);
-     }
-     this.errorData = {
-       errorTitle: 'Oops! Request for document failed',
-       errorDesc: 'Something bad happened. Please try again later.'
-     };
- 
-     return throwError(this.errorData);*/
+        console.error('An error occurred:', error.error.message);
+      } else {
+        console.error(`Backend returned code ${error.status}, ` + `body was: ${error.error}`);
+      }*/
+
+    // console.log(error.error.text)
+    // console.log(error)
+
+    this.errorData = {
+      title: 'Falha',
+      message: error.error.text,
+      error: error.error,
+      status: error.status,
+      statusText: error.statusText,
+      url: error.url
+    };
+
+    // console.log(this.errorData);
+    return throwError(this.errorData);
 
   }
 
