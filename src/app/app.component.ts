@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ScriptService } from './script.service';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +9,9 @@ export class AppComponent {
 
   title = 'equilibrium';
 
-  constructor(private scriptService: ScriptService) { }
+  constructor() { }
 
   ngOnInit() {
-
-    this.scriptService.loadExternalScript('./assets/js/script.js').then(() => { }).catch(() => { });
 
   }
 

@@ -9,26 +9,24 @@
             <h2>{{object.subtitle}}</h2>
         </div>
 
-        <div class="single-item-carousel owl-carousel owl-theme">
-            <div class="slide">
 
-                <div class="row">
-                    <div class="services-block col-md-6 col-sm-6 col-xs-12" *ngFor="let object of grid">
-                        <div class="inner-box">
-                            <div class="content">
-                                <div class="icon-box">
-                                    <img alt="image" [src]="object.icon" style="width: 50px;" />
-                                </div>
-                                <h3><a>{{object.title}}</a></h3>
-                                <div class="text">{{object.description}}
-                                </div>
+        <div class="slide">
+
+            <div class="row">
+                <div class="services-block col-md-6 col-sm-6 col-xs-12" *ngFor="let object of grid">
+                    <div class="inner-box">
+                        <div class="content">
+                            <div class="icon-box">
+                                <img alt="image" [src]="object.icon" style="width: 50px;" />
+                            </div>
+                            <h3><a>{{object.title}}</a></h3>
+                            <div class="text">{{object.description}}
                             </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
 
+            </div>
         </div>
 
     </div>

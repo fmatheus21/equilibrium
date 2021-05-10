@@ -14,6 +14,7 @@ export class AppService {
   private service = './assets/json/service.json';
   private fluid = './assets/json/fluid.json';
   private footer = './assets/json/footer.json';
+  private about = './assets/json/about.json';
 
 
 
@@ -46,6 +47,10 @@ export class AppService {
 
   findFooter(): Observable<any[]> {
     return this.http.get<any[]>(this.footer);
+  }
+
+  findAbout(): Observable<any[]> {
+    return this.http.get<any[]>(this.about);
   }
 
 }

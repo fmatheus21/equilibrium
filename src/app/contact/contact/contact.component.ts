@@ -49,7 +49,6 @@ export class ContactComponent implements OnInit {
     result = Object.keys(result).map(e => result[e].contactRepresentative);
     result.forEach((e: any) => {
       this.contact = e;
-      console.log(this.contact)
     })
   }
 

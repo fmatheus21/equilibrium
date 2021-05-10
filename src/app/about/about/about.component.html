@@ -1,19 +1,19 @@
-<section class="page-title" style="background-image:url(../../../assets/images/background/7.jpg)">
+<section class="page-title" *ngFor="let object of about">
     <div class="auto-container">
         <div class="clearfix">
             <div class="pull-left">
-                <h1>A Empresa</h1>
+                <h1>{{object.titlePage}}</h1>
             </div>
         </div>
     </div>
 </section>
 
-<section class="about-style-two section-padding">
+<section class="about-style-two section-padding" *ngFor="let object of about">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <div class="about-img">
-                    <img src="./assets/images/resource/welcome.jpg" alt="image">
+                    <img [src]="object.image" alt="image">
                 </div>
             </div>
             <div class="col-md-6">
@@ -23,10 +23,9 @@
                         <div class="separator">
                             <img alt="image" src="./assets/images/icons/folha.svg" width="20px" />
                         </div>
-                        <h2>Soluções inteligentes que trazem benefícios ao meio ambiente e ao seu animalzinho.</h2>
+                        <h2>{{object.title}}</h2>
                     </div>
-                    <p class="special">Somos uma fabricante de rações que atua no segmento de graxaria, coletando e processando resíduos de carne desde 2020. Possuímos uma fábrica em Duque de Caxias, Rio de Janeiro, bem equipada com profissionais altamente qualificados
-                        que permite que nossa produção seja de até 400 toneladas de rações por dia para bovinos, aves, suínos e cães.
+                    <p class="special">{{object.description}}
                     </p>
                 </div>
             </div>
