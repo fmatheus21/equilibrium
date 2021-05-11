@@ -9,7 +9,7 @@ tpj(document).ready(function() {
             jsFileLocation: "plugins/revolution/js/",
             sliderLayout: "fullwidth",
             dottedOverlay: "none",
-            delay: 100000,
+            delay: 50000,
             navigation: {
                 keyboardNavigation: "off",
                 keyboard_direction: "horizontal",
@@ -29,7 +29,7 @@ tpj(document).ready(function() {
                     enable: true,
                     hide_onmobile: true,
                     hide_under: 600,
-                    hide_onleave: false,
+                    hide_onleave: true,
                     tmp: '',
                     left: {
                         h_align: "left",

@@ -8,6 +8,8 @@ import { ScriptService } from 'src/app/script.service';
 })
 export class SliderComponent implements OnInit {
 
+  images: any[];
+
   constructor(private scriptService: ScriptService) { }
 
   ngOnInit() {
@@ -26,6 +28,16 @@ export class SliderComponent implements OnInit {
     this.scriptService.loadExternalScript('./assets/plugins/revolution/js/extensions/revolution.extension.video.min.js').then(() => { }).catch(() => { });
     this.scriptService.loadExternalScript('./assets/js/main-slider-script.js').then(() => { }).catch(() => { });
 
+    this.loadImages();
+
+  }
+
+  private loadImages() {
+    this.images = [
+      './assets/images/slider/meio-ambiente.jpg',
+      './assets/images/slider/sustentabilidade.jpg',
+      './assets/images/slider/tecnologia.jpg'
+    ]
   }
 
 }

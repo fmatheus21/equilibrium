@@ -4489,7 +4489,7 @@ img {
 
 .page-title .pull-left,
 .page-title .pull-right {
-    width: 49%;
+    width: 100%;
 }
 
 .page-title:before {
